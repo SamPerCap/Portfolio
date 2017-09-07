@@ -1,0 +1,152 @@
+@import url('https://fonts.googleapis.com/css?family=Rajdhani');
+*{
+  background-color: black;
+  color: #b2b6b3;
+  font-weight: bold;
+  font-size: 45px;
+  font-family: 'Rajdhani', sans-serif;
+}
+
+@-webkit-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@-moz-keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+@keyframes fadeIn { from { opacity:0; } to { opacity:1; } }
+
+.Meet {
+  margin: 5% 0 0 10.5%;
+  opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1.5s;
+	-moz-animation-duration:1.5s;
+	animation-duration:1.5s;
+}
+.Sam{
+  margin: 2% 0 0 42%;
+  opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+  animation-delay: 1s ;
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1.5s;
+	-moz-animation-duration:1.5s;
+	animation-duration:1.5s;
+}
+.Now {
+  margin: 2% 0 0 80.5%;
+  opacity:0;  /* make things invisible upon start */
+	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+	-moz-animation:fadeIn ease-in 1;
+	animation:fadeIn ease-in 1;
+  animation-delay: 2s ;
+	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+	-moz-animation-fill-mode:forwards;
+	animation-fill-mode:forwards;
+
+	-webkit-animation-duration:1.5s;
+	-moz-animation-duration:1.5s;
+	animation-duration:1.5s;
+}
+
+.Inicio {
+display: flex;
+background-image: url("Inicio.png");
+background-repeat: no-repeat;
+background-size: contain;
+margin: 3% 0 0 40.5%;
+opacity:0;
+-webkit-animation:fadeIn ease-in 1;
+-moz-animation:fadeIn ease-in 1;
+animation:fadeIn ease-in 1;
+animation-delay: 3.5s ;
+-webkit-animation-fill-mode:forwards;
+-moz-animation-fill-mode:forwards;
+animation-fill-mode:forwards;
+-webkit-animation-duration:1s;
+-moz-animation-duration:1s;
+animation-duration:4s;
+}
+
+body a:active{
+  transition-delay: 5;
+  background-color: white;
+}
+
+
+@media only screen and (max-width: 320px){
+  .Meet {
+    margin: 10% 0 0 .5%;
+    opacity:0;  /* make things invisible upon start */
+  	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  	-moz-animation:fadeIn ease-in 1;
+  	animation:fadeIn ease-in 1;
+
+  	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  	-moz-animation-fill-mode:forwards;
+  	animation-fill-mode:forwards;
+
+  	-webkit-animation-duration:1.5s;
+  	-moz-animation-duration:1.5s;
+  	animation-duration:1.5s;
+  }
+  .Sam{
+    margin: 5% 0 0 35.5%;
+    opacity:0;  /* make things invisible upon start */
+  	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  	-moz-animation:fadeIn ease-in 1;
+  	animation:fadeIn ease-in 1;
+    animation-delay: 1s ;
+  	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  	-moz-animation-fill-mode:forwards;
+  	animation-fill-mode:forwards;
+
+  	-webkit-animation-duration:1.5s;
+  	-moz-animation-duration:1.5s;
+  	animation-duration:1.5s;
+  }
+  .Now {
+    margin: 5% 0 0 71%;
+    opacity:0;  /* make things invisible upon start */
+  	-webkit-animation:fadeIn ease-in 1;  /* call our keyframe named fadeIn, use animattion ease-in and repeat it only 1 time */
+  	-moz-animation:fadeIn ease-in 1;
+  	animation:fadeIn ease-in 1;
+    animation-delay: 2s ;
+  	-webkit-animation-fill-mode:forwards;  /* this makes sure that after animation is done we remain at the last keyframe value (opacity: 1)*/
+  	-moz-animation-fill-mode:forwards;
+  	animation-fill-mode:forwards;
+
+  	-webkit-animation-duration:1.5s;
+  	-moz-animation-duration:1.5s;
+  	animation-duration:1.5s;
+  }
+
+  .Inicio {
+  display: flex;
+  background-image: url("Inicio.png");
+  background-repeat: no-repeat;
+  background-size: contain;
+  margin: 12% 0 0 28.5%;
+  opacity:0;
+  -webkit-animation:fadeIn ease-in 1;
+  -moz-animation:fadeIn ease-in 1;
+  animation:fadeIn ease-in 1;
+  animation-delay: 3.5s ;
+  -webkit-animation-fill-mode:forwards;
+  -moz-animation-fill-mode:forwards;
+  animation-fill-mode:forwards;
+  -webkit-animation-duration:1s;
+  -moz-animation-duration:1s;
+  animation-duration:4s;
+}
+
+
+}

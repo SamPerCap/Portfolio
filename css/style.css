@@ -1,0 +1,720 @@
+@-webkit-keyframes zoom {
+    from {-webkit-transform:scale(0)}
+    to {-webkit-transform:scale(1)}
+}
+
+@keyframes zoom {
+    from {transform:scale(0)}
+    to {transform:scale(1)}
+}
+body{
+  background-image: url("Fondo.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;}
+  /* Menú */
+  footer{
+    height: 200px;
+  }
+  header{
+    height: 150px;
+  }
+  a:link {
+      color: white;
+  }
+  a:visited {
+    color:white;
+  }
+  a:hover{
+    color:white;
+  }
+  a:active{
+    color:white;
+  }
+
+  #sse1
+  {
+      /*You can decorate the menu's container, such as adding background images through this block*/
+      margin-left: 45%;
+      height: 38px;
+      padding: 15px;
+      border-radius: 3px;
+      box-sizing: content-box;
+  }
+  #sses1
+  {
+      margin:0 auto;/*This will make the menu center-aligned. Removing this line will make the menu align left.*/
+  }
+  #sses1 ul
+  {
+      position: relative;
+      list-style-type: none;
+      float:left;
+      padding:0;margin:0;
+  }
+  #sses1 li
+  {
+      float:left;
+      list-style-type: none;
+      padding:0;margin:0;background-image:none;
+  }
+  /*CSS for background bubble*/
+  #sses1 li.highlight
+  {
+      background-color: white;
+      top:0px;
+      height:2px;
+      z-index: 1;
+      position: absolute;
+      overflow:hidden;
+  }
+  #sses1 li a
+  {
+      box-sizing: content-box;
+      height:30px;
+      padding-top: 8px;
+      margin: 0 20px;/*used to adjust the distance between each menu item. Now the distance is 20+20=40px.*/
+      color: #fff;
+      font: normal 25px arial;
+      text-align: center;
+      text-decoration: none;
+      display: block;
+      float:left;
+      position: relative;
+      z-index: 2;
+  }
+
+/* Frontal */
+.Video{
+  position: relative;
+  margin: 2% 0 0 30%;
+}
+#Barra {
+border: white solid 1px;
+background-color: white;
+margin: 3% 5% 0% 5%;
+width: auto;
+}
+#Primer{
+  margin: 10% 0 0 5%;
+  width: 630px;
+  font-size: 20px;
+  color: white;
+  font-family: Arial;
+}
+#Segun{
+  margin: 18% 0 0 45%;
+  width: 630px;
+  font-size: 20px;
+  color: white;
+  font-family: Arial;
+}
+#Tercer{
+  margin: 7% 0 0 5%;
+  width: 630px;
+  font-size: 20px;
+  color: white;
+  font-family: Arial;
+}
+#WAIT{
+  margin: 10% 0 0 20%;
+  font-size: 40px;
+  color: white;
+  font-family: Arial;
+}
+#Foto{
+  margin: -15% 0 0 60%;
+  position: absolute;
+  float: left;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("Uno.jpeg");
+}
+#Fotoo{
+  margin: 15% 0 0 5%;
+  position: absolute;
+  float: left;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("Dos.jpg");
+}
+#Fotooo{
+  margin: -20% 0 0 60%;
+  position: absolute;
+  float: left;
+  width: 400px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-image: url("Tres.png");
+}
+
+/* Portfolio */
+#PF0{
+  font-size: 40px;
+  font-family: arial, sans-serif;
+  color: white;
+  margin-left: 15%;
+}
+#FF0{
+  background-image: url("Cuatri.png");
+  margin-left: 15%;
+  width: 300px;
+  height: 300px;
+  background-size: cover;
+  background-repeat: no-repeat;
+}
+.Contenedor{
+  display: block;
+  flex-flow: wrap;
+  flex-direction: row;
+  margin: -30% 0 0 45%;
+  float: left;
+  width: 650px;
+  height: 480px;
+}
+#Imagen{
+  margin: 5px;
+  border: rgb(70, 70, 70) solid 1px;
+  background-color:rgb(28, 27, 27);
+  transition: 0.3s;
+  cursor: pointer;
+  }
+#Imagen:hover {
+  opacity: 0.7;
+}
+
+/*Modal*/
+.modalDialog {
+    height: 900px;
+		position: absolute;
+    top: 0;
+    right: 0;
+		bottom: 0;
+		left: 0;
+		background: rgba(0,0,0,0.8);
+		z-index: 1;
+		opacity:0;
+		-webkit-transition: opacity 400ms ease-in;
+		-moz-transition: opacity 400ms ease-in;
+		transition: opacity 400ms ease-in;
+		pointer-events: none;
+	}
+
+	.modalDialog:target {
+		opacity:1;
+		pointer-events: auto;
+	}
+
+	.modalDialog > div {
+		width: 60%;
+		position: relative;
+		margin: 10% auto;
+		padding: 5px 5px 5px 5px;
+    background-color: #2e2e2e;
+	}
+
+	.close {
+		background: #606061;
+		color: #a6a6a6;
+		line-height: 25px;
+		position: absolute;
+		right: -12px;
+		text-align: center;
+		top: -10px;
+		width: 24px;
+		text-decoration: none;
+		font-weight: bold;
+		-webkit-border-radius: 12px;
+		-moz-border-radius: 12px;
+		border-radius: 12px;
+		-moz-box-shadow: 1px 1px 3px #000;
+		-webkit-box-shadow: 1px 1px 3px #000;
+		box-shadow: 1px 1px 3px #000;
+	}
+
+	.close:hover { background: #07bddd; }
+
+/*Contact*/
+
+label {
+    font-family: arial, "sens-serif";
+    color: white;
+    display:block;
+    margin-top:20px;
+    letter-spacing:2px;
+}
+/* Centre the page */
+.body {
+    display:block;
+    margin:0 auto;
+    width:576px;
+}
+
+/* Centre the form within the page */
+form {
+    margin: 3% 0 0 52%;
+    width:459px;
+}
+
+/* Style the text boxes */
+input, textarea {
+	width:439px;
+	height:27px;
+	background:#efefef;
+	border:1px solid #dedede;
+	padding:10px;
+	margin-top:3px;
+	font-size:0.9em;
+	color:#d6d6d6;
+}
+
+input, textarea {
+    font-family: arial;
+    width:439px;
+    height:27px;
+    background:#efefef;
+    border:1px solid #dedede;
+    padding:10px;
+    margin-top:3px;
+    font-size:0.9em;
+    color:#3a3a3a;
+    -moz-border-radius:5px;
+    -webkit-border-radius:5px;
+    border-radius:5px;
+}
+input:focus, textarea:focus {
+    border:1px solid #97d6eb;
+}
+#submit, #Check{
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 17px;
+    width:127px;
+    height:38px;
+    border:none;
+    margin-top:20px;
+    cursor:pointer;
+}
+
+#submit:hover, Check:hover{
+	    opacity:.9;
+	}
+  #Logo{  /*AntiSpam*/
+    input, textarea {
+    	width:39px;
+    	height:27px;
+    	background:#efefef;
+    	border:1px solid #dedede;
+    	padding:10px;
+    	margin-top:3px;
+    	font-size:0.9em;
+    	color:#d6d6d6;
+    }
+
+    input, textarea {
+        font-family: arial;
+        width: 170px;
+        height:27px;
+        background:#efefef;
+        border:1px solid #dedede;
+        padding: 5px;
+        margin-top:3px;
+        font-size:0.9em;
+        color:#3a3a3a;
+        -moz-border-radius:5px;
+        -webkit-border-radius:5px;
+        border-radius:5px;
+    }
+    input:focus, textarea:focus {
+        border:1px solid #97d6eb;
+    }
+    .CaptchaSpam {
+      position: absolute;
+      float: left;
+      margin-top: 15%;
+      margin-left: 0%;
+    }
+  #submit{
+    position: absolute;
+    float: left;
+    margin-left: 3%;
+    border-radius: 5px;
+    font-family: arial;
+    font-size: 15px;
+    width:127px;
+    height:38px;
+    border:none;
+    cursor:pointer;
+  }
+  }
+   #Check{
+        border-radius: 5px;
+        font-family: arial;
+        font-size: 15px;
+        width:127px;
+        height:38px;
+        border:none;
+        margin-top:20px;
+        cursor:pointer;
+    }
+
+    #submit:hover, Check:hover{
+    	    opacity:.9;
+    	}
+      #Logo{
+      background-image: url('pruebavb.png');
+      background-size: cover;
+      background-repeat: no-repeat;
+      width: 350px;
+      height: 350px;
+      position: absolute;
+      border: 0px;
+      position: absolute;
+      margin: 8% 0 0 15%;
+    }
+    #Correo{
+
+      width: 35px;
+      height: 30px;
+      position: absolute;
+      margin: 5% 0 0 0;
+    }
+    #Corr {
+      margin: 6.5% 0 0 15%;
+      color: white;
+      font-size: 20px;
+      font-family: arial;
+    }
+    #Tele {
+      margin: 8% 0 0 15%;
+      color: white;
+      font-size: 20px;
+      font-family: arial;
+    }
+    #Tel{
+      color: white;
+      width: 30px;
+      height: 30px;
+      position: absolute;
+      margin: 8% 0 0 .5%;
+    }
+
+
+#Correo{
+
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 0 0 0 51.5%;
+}
+#Corr {
+  margin: 1% 0 0 57%;
+  color: white;
+  font-size: 20px;
+  font-family: arial;
+}
+#Tele {
+  margin: 3% 0 0 57%;
+  color: white;
+  font-size: 20px;
+  font-family: arial;
+}
+#Tel{
+  color: white;
+  width: 50px;
+  height: 50px;
+  position: absolute;
+  margin: 2% 0 0% 51.5%;
+}
+
+@media only screen and (max-width: 320px) {
+  #sses1 li.highlight
+  {
+    background-color: transparent;
+  }
+  #sse1 {
+    font-family: Arial, 'sens-serif';
+    width: 40%;
+    font-size: 40px;
+    min-height: 5px;
+    border-radius: 10px;
+    display: flex;
+    display: -webkit-flex;
+    display: -moz-flex;
+    display: -ms-flex;
+    float: right;
+    margin: 5% 50% 0 0;
+    position: relative;
+    justify-content: space-around;
+    -webkit-justify-content: space-around;
+    -moz-justify-content: space-around;
+    -ms-justify-content: space-around;
+  }
+   #sses1 {
+    align-items: center;
+  }
+
+  #sses1 {
+    display: flex;
+   display: -webkit-flex;
+   display: -moz-flex;
+   display: -ms-flex;
+   height: Auto;
+  }
+  /*AntiSpam*/
+  input, textarea {
+  	width:39px;
+  	height:27px;
+  	background:#efefef;
+  	border:1px solid #dedede;
+  	padding:10px;
+  	margin-top:3px;
+  	font-size:0.9em;
+  	color:#d6d6d6;
+  }
+
+  input, textarea {
+      font-family: arial;
+      width: 170px;
+      height:27px;
+      background:#efefef;
+      border:1px solid #dedede;
+      padding: 5px;
+      margin-top:3px;
+      font-size:0.9em;
+      color:#3a3a3a;
+      -moz-border-radius:5px;
+      -webkit-border-radius:5px;
+      border-radius:5px;
+  }
+  input:focus, textarea:focus {
+      border:1px solid #97d6eb;
+  }
+  .CaptchaSpam {
+    margin-top: 15%;
+    margin-left: 0%;
+  }
+#submit{
+  display: block;
+  margin:1% 0 0 0;
+  border-radius: 5px;
+  font-family: arial;
+  font-size: 15px;
+  width:127px;
+  height:38px;
+  border:none;
+  cursor:pointer;
+}
+
+ #Check{
+     display: block;
+      border-radius: 5px;
+      font-family: arial;
+      font-size: 15px;
+      width:127px;
+      height:38px;
+      border:none;
+      margin-top:20px;
+      cursor:pointer;
+  }
+
+  #submit:hover, Check:hover{
+  	    opacity:.9;
+  	}
+    #Logo{
+      background-image: url('pruebavb.png');
+      background-size: contain;
+      border: 0px solid transparent;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    margin: -45% 0 0 60%;
+  }
+  #Correo{
+
+    width: 35px;
+    height: 30px;
+    position: absolute;
+    margin: 5% 0 0 0;
+  }
+  #Corr {
+    margin: 6.5% 0 0 15%;
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+  }
+  #Tele {
+    margin: 8% 0 0 15%;
+    color: white;
+    font-size: 20px;
+    font-family: arial;
+  }
+  #Tel{
+    color: white;
+    width: 30px;
+    height: 30px;
+    position: absolute;
+    margin: 8% 0 0 .5%;
+  }
+
+/*Portfolio*/
+
+  #PF0{
+    font-size: 20px;
+    font-family: arial, sans-serif;
+    color: white;
+    margin-left: 15%;
+  }
+  #FF0{
+    background-image: url("Cuatri.png");
+    margin-left: 15%;
+    width: 150px;
+    height: 150px;
+    background-size: cover;
+    background-repeat: no-repeat;
+  }
+  .Contenedor{
+    display: block;
+    flex-flow: wrap;
+    flex-direction: row;
+    margin: 0% 0 0 13.7%;
+    float: left;
+    width: 325px;
+    height: 240px;
+  }
+  #Imagen{
+    margin: 5px;
+    border: rgb(70, 70, 70) solid 1px;
+    background-color:rgb(28, 27, 27);
+    transition: 0.3s;
+    cursor: pointer;
+    }
+  #Imagen:hover {
+    opacity: 0.7;
+  }
+
+  /*Modal*/
+  .modalDialog {
+      height: 900px;
+  		position: absolute;
+      top: 50px;
+      right: 0;
+  		bottom: 0;
+  		left: 0;
+  		/*background: rgba(0,0,0,0.8);*/
+  		z-index: 9;
+  		opacity:0;
+  		-webkit-transition: opacity 400ms ease-in;
+  		-moz-transition: opacity 400ms ease-in;
+  		transition: opacity 400ms ease-in;
+  		pointer-events: none;
+  	}
+
+  	.modalDialog:target {
+  		opacity:1;
+  		pointer-events: auto;
+  	}
+
+  	.modalDialog > div {
+  		width: 60%;
+  		position: relative;
+  		margin: 10% auto;
+  		padding: 5px 5px 5px 5px;
+      background-color: #2e2e2e;
+  	}
+
+  	.close {
+  		background: #606061;
+  		color: #a6a6a6;
+  		line-height: 25px;
+  		position: absolute;
+  		right: -12px;
+  		text-align: center;
+  		top: -10px;
+  		width: 24px;
+  		text-decoration: none;
+  		font-weight: bold;
+  		-webkit-border-radius: 12px;
+  		-moz-border-radius: 12px;
+  		border-radius: 12px;
+  		-moz-box-shadow: 1px 1px 3px #000;
+  		-webkit-box-shadow: 1px 1px 3px #000;
+  		box-shadow: 1px 1px 3px #000;
+  	}
+
+  	.close:hover { background: #07bddd; }
+    .Video{
+      position: relative;
+      margin: 0 0 0 25%;
+    }
+    #Barra {
+    border: white solid 1px;
+    background-color: white;
+    margin: 3% 0 0 10%;
+    width: 660px;
+    }
+    #Primer{
+      margin: 10% 0 0 5%;
+      width: 630px;
+      font-size: 20px;
+      color: white;
+      font-family: Arial;
+    }
+    #Segun{
+      margin: 110% 0 0 5%;
+      width: 630px;
+      font-size: 20px;
+      color: white;
+      font-family: Arial;
+    }
+    #Tercer{
+      margin: 10% 0 0 5%;
+      width: 630px;
+      font-size: 20px;
+      color: white;
+      font-family: Arial;
+    }
+    #WAIT{
+      margin: 110% 0 0 20%;
+      font-size: 40px;
+      color: white;
+      font-family: Arial;
+    }
+    #Foto{
+      margin: 2% 0 0 5%;
+      position: absolute;
+      float: left;
+      width: 300px;
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("Uno.jpeg");
+    }
+    #Fotoo{
+      margin: 180% 0 0 5%;
+      position: absolute;
+      float: left;
+      width: 400px;
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("Dos.jpg");
+    }
+    #Fotooo{
+      margin: 2% 0 0 5%;
+      position: absolute;
+      float: left;
+      width: 400px;
+      height: 300px;
+      background-size: cover;
+      background-repeat: no-repeat;
+      background-image: url("Tres.png");
+    }
+
+
+}
